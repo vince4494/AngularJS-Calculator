@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app = "appModule">
+
+<head>
+  <title>Simple Calculator</title>
+    <script src="angular.min.js"></script>
+    <script src="HW2.js"></script>
+    <link href = "Calculator.css" rel = "stylesheet" type="text/css">
+</head>
+
+<body <div ng-app ng-controller="calcCrtl">
+
+  <!-- Tell the app to use the Ctrl scope defined in our app.js -->
+  
+  
+    <div class="calcbody">
+    
+      <!-- Calculator Display -->
+      <div class="thinborder" >
+      
+        <!-- Display is bound to scope variables in app.js -->
+        <p class="output" name="output" >
+          {{val}}<br>
+          {{opClicked}}
+        </p>
+        
+      </div>
+    
+      <div class="calcbuttons">
+        
+        <!-- Buttons all have ng-click directives that call functions in app.js -->
+        
+        <button name="btn1" class="numberbutton" value="1" ng-click='btnClick(1)'>1</button>
+        <button name="btn2" class="numberbutton" value="2" ng-click='btnClick(2)'>2</button>
+        <button name="btn3" class="numberbutton" value="3" ng-click='btnClick(3)'>3</button>
+        <button name="btnMinus" class="operationbutton" value = '-' ng-click='operationClicked("-")'> - </button>
+        <br>
+        <button name="btn4" class="numberbutton" value="4" ng-click='btnClick(4)'>4</button>
+        <button name="btn5" class="numberbutton" value="5" ng-click='btnClick(5)'>5</button>
+        <button name="btn6" class="numberbutton" value="6" ng-click='btnClick(6)'>6</button>
+        <button name="btnPlus" class="operationbutton" value '+' ng-click='operationClicked("+")'>+</button>
+        <br>
+        <button name="btn7" class="numberbutton" value="7" ng-click='btnClick(7)'>7</button>
+        <button name="btn8" class="numberbutton" value="8" ng-click='btnClick(8)'>8</button>
+        <button name="btn9" class="numberbutton" value="9" ng-click='btnClick(9)'>9</button>
+        <button name="btnEquals" class="operationbutton" value = '*' ng-click='operationClicked("*")'>*</button>
+        <br>
+        <button name="btn0" class="numberbutton" value="0" ng-click='updateOutput(0)'>0</button>
+        <button name="btnClear" class="clearbutton" ng-click='clear()'>CLEAR</button>
+        <button name="btnEquals" class="operationbutton" value = "=" ng-click='operationClicked("=")'>=</button>
+        <br>
+        
+      </div>
+       <p>
+      
+    </p>
+    
+    </div>
+    
+    <!-- Scoped variables displayed for debugging -->
+   
+    
+  </div>
+  
